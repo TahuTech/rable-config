@@ -41,3 +41,7 @@ CONFIG_BUILD_OUTPUT_UF2=y
 
 # Turn on logging, and set ZMK logging to debug output
 CONFIG_ZMK_USB_LOGGING=n
+
+# Sleep Keyboard if cant use (defaut 5mins)
+CONFIG_ZMK_SLEEP=y
+CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=300000
