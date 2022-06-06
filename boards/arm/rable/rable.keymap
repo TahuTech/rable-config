@@ -12,6 +12,13 @@
 
 #define xxx &none
 
+//color remapping
+#define white  &rgb_ug RGB_COLOR_HSB(255,250,250) 
+#define red &rgb_ug RGB_COLOR_HSB(255,0,0)
+#define green &rgb_ug RGB_COLOR_HSB(127,255,0)
+#define blue  &rgb_ug RGB_COLOR_HSB(0, 150, 255)
+
+
 &lt {
     tapping-term-ms = <444>;
 };
@@ -42,14 +49,14 @@
         // --------------------------------------------------------------------------------------------------------------
         // | xx  |     |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10  |  F11  |  F12  | INS | DEL |     |
         // | F7  | Caps |     |  Prev   |  Play   |  Next   |     |     |     |     |     |     |     |     |      |     Clear        |     |
-        // | F8  |        | Vol_DOWN  |  Vol_UP   |  Mute  |     |     |     |     |     |     |     |     |     |     |                 |     |
+        // | F8  |        | Vol_DOWN  |  Vol_UP   |  Mute  |     |     |LEFT |DOWN |  UP |RIGHT|     |     |     |     |                 |     |
         // | F9  |          |     |     |     |     |     |     |     |     |     |     |     |     |     |       |       |     |
         // | F10 |        |     |     |                                                         |         |        |      |     |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
          xxx      xxx    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8     &kp F9   &kp F10    &kp F11  &kp F12  &kp INS  &kp DEL           &trans  
         &kp F7   &kp CAPS   &trans   &kp C_PREV    &kp C_PP   &kp C_NEXT    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &kp F8   &trans &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE   &trans    &trans   &trans  &trans &trans   &trans &trans    &trans            &trans              &trans  
+        &kp F8   &trans &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE   &trans     &kp LEFT  &kp DOWN &kp UP   &kp RIGHT   &trans &trans    &trans            &trans              &trans  
         &kp F9   &trans  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
         &kp F10  &trans  &trans   &trans                                   &trans                                      &trans    &trans   &kp DEL   &trans
       >;
@@ -57,36 +64,20 @@
 
      navigations {
         // --------------------------------------------------------------------------------------------------------------
-        // |  XX   |    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |          |     | 
-        // |       |      |     |     |     |     |     |     |     |     |     |     |     |     |     |              |     |
-        // |       |        |     |     |     |     |     |LEFT |DOWN |  UP |RIGHT|     |     |     |     |            |     |
-        // |       |          |     |     |     |     |     |     |     |     |     |     |     |     |     |     |    |     |
-        // |       |      |     |     |                                                           |         |     |    |     |
+        // |  XX    |    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |          |     | 
+        // | BT CLR |      |      |  WHITE  |     |  RED   |     |     |     |     |     |     |     |     |     |              |     |
+        // | BT 1   |        |     |     |     |     | GREEN  |     |     |     |     |     |     |     |     |            |     |
+        // | BT 2   |          |     |     |     |     | BLUE    |     |     |     |     |     |     |     |     |     |    |     |
+        // | BT 3   |      |     |     |                     RBG Toggle                            |         |     |    |     |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
-         xxx     &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
-        &bt BT_CLR  &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &bt BT_SEL 1  &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans                  &trans        &trans  
-        &bt BT_SEL 2  &trans   &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &rgb_ug RGB_COLOR_HSB(0, 150, 255)   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
+         xxx          &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
+        &bt BT_CLR    &trans   &trans   &kp white    &kp red   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
+        &bt BT_SEL 1  &trans   &trans   &trans    &trans   &trans    &kp green   &trans  &trans &trans    &trans &trans    &trans                  &trans        &trans  
+        &bt BT_SEL 2  &trans   &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &kp blue   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
         &bt BT_SEL 3  &trans   &trans   &trans                                   &rgb_ug RGB_TOG                                                &trans    &trans   &trans    &trans
       >;
     };
 
-    settings {
-        // --------------------------------------------------------------------------------------------------------------
-        // |  XX  | BT CLR|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-        // | BT 1 |       |  Color White   |     |   Color Red  |     |     |     |     |     |     |     |     |     |     |           |     |
-        // | BT 2 |       |     |     |     |     | Color Green    |     |     |     |     |     |     |     |     |           |     |
-        // | BT 3 |       |     |     |  -brigh   |  +brigh   |  COLOR Blue  |     |     |     |     |     |     |     |     |     |     |     |
-        // | BT 4 |       |     |     |                            RGB TOG                        |     |     |     |     |
-        // ---------------------------------------------------------------------------------------------------------------
-      bindings = <
-        &none         &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans        &trans      
-        &bt BT_CLR    &trans  &trans   &rgb_ug RGB_COLOR_HSB(255,250,250)   &trans   &rgb_ug RGB_COLOR_HSB(255,0,0)    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &bt BT_SEl 1  &trans  &trans   &trans    &trans   &trans    &rgb_ug RGB_COLOR_HSB(127,255,0)   &trans    &trans   &trans    &trans &trans    &trans            &trans              &trans  
-        &bt BT_SEl 2  &trans  &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &rgb_ug RGB_COLOR_HSB(0, 150, 255)   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
-        &bt BT_SEl 3  &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                       &trans    &trans   &trans    &trans
-      >;
-    };
   };
 };
