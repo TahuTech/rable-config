@@ -48,8 +48,8 @@
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
          xxx      xxx    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8     &kp F9   &kp F10    &kp F11  &kp F12  &kp INS  &kp DEL           &trans  
-        &kp F7   &kp CAPS  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &kp F8   &trans  &trans   &trans    &trans   &trans    &trans   &trans  &trans &trans   &trans &trans    &trans            &trans              &trans  
+        &kp F7   &kp CAPS   &trans   &kp C_PREV    &kp C_PP   &kp C_NEXT    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
+        &kp F8   &trans &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE   &trans    &trans   &trans  &trans &trans   &trans &trans    &trans            &trans              &trans  
         &kp F9   &trans  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
         &kp F10  &trans  &trans   &trans                                   &trans                                      &trans    &trans   &kp DEL   &trans
       >;
@@ -72,21 +72,5 @@
       >;
     };
 
-    settings {
-        // --------------------------------------------------------------------------------------------------------------
-        // |  XX  | BT CLR|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
-        // | BT 1 |       |  Color White   |     |   Color Red  |     |     |     |     |     |     |     |     |     |     |           |     |
-        // | BT 2 |       |     |     |     |     | Color Green    |     |     |     |     |     |     |     |     |           |     |
-        // | BT 3 |       |     |     |  -brigh   |  +brigh   |  COLOR Blue  |     |     |     |     |     |     |     |     |     |     |     |
-        // | BT 4 |       |     |     |                            RGB TOG                        |     |     |     |     |
-        // ---------------------------------------------------------------------------------------------------------------
-      bindings = <
-         xxx           &bt BT_CLR   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
-        &bt BT_SEl 0   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &bt BT_SEl 1   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans                  &trans        &trans  
-        &bt BT_SEl 2   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
-        &bt BT_SEl 3   &trans   &trans   &trans                                  &rgb_ug RGB_TOG                                                 &trans    &trans   &trans    &trans
-      >;
-    };
   };
 };
