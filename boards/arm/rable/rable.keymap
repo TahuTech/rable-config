@@ -72,5 +72,21 @@
       >;
     };
 
+    settings {
+        // --------------------------------------------------------------------------------------------------------------
+        // |  XX  | BT CLR|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
+        // | BT 1 |       |  Color White   |     |   Color Red  |     |     |     |     |     |     |     |     |     |     |           |     |
+        // | BT 2 |       |     |     |     |     | Color Green    |     |     |     |     |     |     |     |     |           |     |
+        // | BT 3 |       |     |     |  -brigh   |  +brigh   |  COLOR Blue  |     |     |     |     |     |     |     |     |     |     |     |
+        // | BT 4 |       |     |     |                            RGB TOG                        |     |     |     |     |
+        // ---------------------------------------------------------------------------------------------------------------
+      bindings = <
+        &none         &bt BT_CLR    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans        &trans      
+        &bt BT_SEl 1  &trans  &trans   &rgb_ug RGB_COLOR_HSB(255,250,250)   &trans   &rgb_ug RGB_COLOR_HSB(255,0,0)    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
+        &bt BT_SEl 2  &trans  &trans   &trans    &trans   &trans    &rgb_ug RGB_COLOR_HSB(127,255,0)   &trans    &trans   &trans    &trans &trans    &trans            &trans              &trans  
+        &bt BT_SEl 3  &trans  &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &rgb_ug RGB_COLOR_HSB(0, 150, 255)   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
+        &bt BT_SEl 4  &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                       &trans    &trans   &trans    &trans
+      >;
+    };
   };
 };
