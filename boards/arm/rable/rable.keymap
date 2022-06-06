@@ -64,7 +64,7 @@
         // |       |      |     |     |                                                           |         |     |    |     |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
-         xxx    &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
+         xxx     &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
         &trans   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
         &trans   &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans                  &trans        &trans  
         &trans   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
@@ -72,7 +72,7 @@
       >;
     };
 
-    setting {
+    settings {
         // --------------------------------------------------------------------------------------------------------------
         // |  XX  | BT CLR|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         // | BT 1 |       |  Color White   |     |   Color Red  |     |     |     |     |     |     |     |     |     |     |           |     |
