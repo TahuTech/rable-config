@@ -67,7 +67,7 @@
          xxx     &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
         &trans  &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
         &trans  &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans                  &trans        &trans  
-        &trans   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
+        &trans  &trans   &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &rgb_ug RGB_COLOR_HSB(0, 150, 255)   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
         &trans  &trans   &trans   &trans                                   &rgb_ug RGB_TOG                                                &trans    &trans   &trans    &trans
       >;
     };
