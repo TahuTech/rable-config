@@ -72,5 +72,21 @@
       >;
     };
 
+    keeb_setting {
+        // --------------------------------------------------------------------------------------------------------------
+        // |  XX   |    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |          |     | 
+        // |       |      |     |     |     |     |     |     |     |     |     |     |     |     |     |              |     |
+        // |       |        |     |     |     |     |     |LEFT |DOWN |  UP |RIGHT|     |     |     |     |            |     |
+        // |       |          |     |     |     |     |     |     |     |     |     |     |     |     |     |     |    |     |
+        // |       |      |     |     |                                                           |         |     |    |     |
+        // ---------------------------------------------------------------------------------------------------------------
+      bindings = <
+         xxx           &bt BT_CLR   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
+        &bt BT_SEl 0   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
+        &bt BT_SEl 1   &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans                  &trans        &trans  
+        &bt BT_SEl 2   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
+        &bt BT_SEl 3   &trans   &trans   &trans                                   &trans                                                &trans    &trans   &trans    &trans
+      >;
+    };
   };
 };
