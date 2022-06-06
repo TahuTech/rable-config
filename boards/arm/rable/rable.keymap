@@ -13,10 +13,10 @@
 #define xxx &none
 
 //color remapping
-#define white  &rgb_ug RGB_COLOR_HSB(255,250,250) 
-#define red    &rgb_ug RGB_COLOR_HSB(255,0,0)
-#define green  &rgb_ug RGB_COLOR_HSB(127,255,0)
-#define blue   &rgb_ug RGB_COLOR_HSB(0, 150, 255)
+#define blue   &rgb_ug RGB_COLOR_HSB(240, 100, 100)
+#define white  &rgb_ug RGB_COLOR_HSB() 
+#define red    &rgb_ug RGB_COLOR_HSB()
+#define green  &rgb_ug RGB_COLOR_HSB()
 
 
 &lt {
@@ -57,7 +57,7 @@
          xxx      xxx    &kp F1   &kp F2   &kp F3   &kp F4   &kp F5   &kp F6   &kp F7   &kp F8     &kp F9   &kp F10    &kp F11  &kp F12  &kp INS  &kp DEL           &rgb_ug RGB_HUI
         &bt BT_CLR     &kp CAPS   &trans   &kp C_PREV    &kp C_PP   &kp C_NEXT    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &rgb_ug RGB_HUD
         &bt BT_SEL 1   &trans &kp C_VOL_DN   &kp C_VOL_UP    &kp C_MUTE   &trans  &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT    &trans    &trans            &trans              &rgb_ug RGB_SAI 
-        &bt BT_SEL 2   &trans  &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans    &rgb_ug RGB_BRI    &rgb_ug RGB_SAD   
+        &bt BT_SEL 2   &trans  &trans   &trans    &trans   &trans    blue   &trans    &trans   &trans    &trans   &trans                       &trans    &rgb_ug RGB_BRI    &rgb_ug RGB_SAD   
         &bt BT_SEL 3   &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                        &trans    &trans   &rgb_ug RGB_BRD   &trans
       >;
     };
