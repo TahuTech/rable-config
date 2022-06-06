@@ -10,13 +10,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define DEF  0
-#define UP   1
-#define SET  2
-#define NAVI 3
-
-#define XXX &none
-
 &lt {
     tapping-term-ms = <500>;
 };
@@ -34,7 +27,7 @@
         // | F5  |  CTRL  |  ALT  |  WIN  |                SPACE                |  MO(UP)  |  LEFT  |  DOWN | RIGHT   |
         // ----------------------------------------------------------------------------------------------------------
       bindings = <
-          XXX   &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE   &kp HOME
+        &none   &gresc     &kp N1   &kp N2   &kp N3   &kp N4   &kp N5   &kp N6   &kp N7   &kp N8     &kp N9   &kp N0    &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE   &kp HOME
         &kp F2  &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T    &kp Y    &kp U    &kp I      &kp O    &kp P     &kp LBKT   &kp RBKT       &kp BSPC          &kp PG_UP
         &kp F3  &kp LCTRL   &kp A    &kp S  &kp D    &lt 3 F    &kp G    &kp H    &kp J    &kp K      &kp L    &kp SEMI  &kp SQT           &kp RET                  &kp PG_DN
         &kp F4  &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B    &kp N    &kp M    &kp COMMA  &kp DOT  &lt 2 FSLH                      &kp RSHFT   &kp UP      &kp END
@@ -59,7 +52,7 @@
       >;
     };
 
-    setting {
+    settings {
         // --------------------------------------------------------------------------------------------------------------
         // |  XX  | BT CLR|     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |     |
         // | BT 1 |       |  Color White   |     |   Color Red  |     |     |     |     |     |     |     |     |     |     |           |     |
@@ -68,15 +61,15 @@
         // | BT 4 |       |     |     |                            RGB TOG                        |     |     |     |     |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
-        &trans        &bt BT_CLR    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans        &trans      
-        &bt BT_SEl 0  &trans  &trans   &rgb_ug RGB_COLOR_HSB(255,250,250)    &trans   &rgb_ug RGB_COLOR_HSB(255,0,0)    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
+        &none         &bt BT_CLR    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans        &trans      
+        &bt BT_SEl 0  &trans  &trans   &rgb_ug RGB_COLOR_HSB(255,250,250)   &trans   &rgb_ug RGB_COLOR_HSB(255,0,0)    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
         &bt BT_SEl 1  &trans  &trans   &trans    &trans   &trans    &rgb_ug RGB_COLOR_HSB(127,255,0)   &trans    &trans   &trans    &trans &trans    &trans            &trans              &trans  
         &bt BT_SEl 2  &trans  &trans   &trans    &rgb_ug RGB_BRD   &rgb_ug RGB_BRI    &rgb_ug RGB_COLOR_HSB(0, 150, 255)   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
         &bt BT_SEl 3  &trans  &trans   &trans                                   &rgb_ug RGB_TOG                                       &trans    &trans   &trans    &trans
       >;
     };
 
-    navigation {
+    navigations {
         // --------------------------------------------------------------------------------------------------------------
         // |  XX   |    |     |     |     |     |     |     |     |     |     |     |     |     |     |     |          |     | 
         // |       |      |     |     |     |     |     |     |     |     |     |     |     |     |     |              |     |
@@ -85,11 +78,11 @@
         // |       |      |     |     |                                                           |         |     |    |     |
         // ---------------------------------------------------------------------------------------------------------------
       bindings = <
-          XXX     &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans        &trans      
+        &none    &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans      
         &trans   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans         &trans        &trans 
-        &trans   &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans            &trans              &trans  
+        &trans   &trans   &trans   &trans    &trans   &trans    &trans   &kp LEFT  &kp DOWN &kp UP   &kp RIGHT &trans    &trans                  &trans        &trans  
         &trans   &trans   &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans    &trans   &trans                       &trans   &trans    &trans   
-        &trans   &trans   &trans   &trans                                   &trans                                                &trans    &trans   &trans   &trans
+        &trans   &trans   &trans   &trans                                   &trans                                                &trans    &trans   &trans    &trans
       >;
     };
 
